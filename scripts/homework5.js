@@ -66,7 +66,7 @@ function drawMap() {
 		.translate([+mapSvg.style('width').replace('px', '') / 2, +mapSvg.style('height').replace('px', '') / 2.3]);
 	let path = d3.geoPath()
 		.projection(projection);
-	//console.log(flightData)
+
 	years = []
 	var yparse = d3.timeParse("%Y");
 	flightData.forEach(function (d) {
@@ -74,7 +74,6 @@ function drawMap() {
 	});
 
 	years2 = d3.set(years).values()
-	//console.log(years2)
 
 	var yearsv = yearSvg.append('g');
 	yearsv.selectAll("text")
@@ -90,6 +89,17 @@ function drawMap() {
 		.text(function (d) {
 			return d
 		});
+
+	yearsv.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", -390 )
+        .attr("y", 30)
+        .style("font-size", "16px")
+		.style("font-family", "sans-serif")
+		.style("fill", "grey")
+        .style("font-weight","5000")
+		.text("Years")
+		.attr("transform", "rotate(-90)");
 
 	var counter = 0;
 	var j = 0;
@@ -179,7 +189,6 @@ function drawMap() {
 		.attr('cx', 7)
 		.attr('cy', 5)
 		.style("opacity", 0.7);
-		
 		
 	const legend = d3.select("#legend")
      
