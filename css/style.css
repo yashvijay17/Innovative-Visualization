@@ -1,0 +1,48 @@
+#wrapper {
+  margin:auto;
+  width:1240px;
+}
+input {
+  width:50px;
+}
+#years {
+   height:800px; 
+   width:150px; 
+  margin:5px;
+  padding:10px;
+}
+
+svg {
+   height:800px; 
+   width:800px; 
+  margin:5px;
+  padding:10px;
+}
+#linechart {
+  width:800px;
+}
+#legend {
+  height:330px;
+  width:1000px;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5 px;
+}
+html {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.gridline{
+  stroke: black;
+  shape-rendering: crispEdges;
+  stroke-opacity: .2;
+  }
+
+.years {
+      position: absolute;
+      top: 0;
+      text-align: center;
+    }
